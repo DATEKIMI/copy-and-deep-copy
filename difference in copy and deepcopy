@@ -1,0 +1,58 @@
+# -*- coding: utf-8 -*-
+import copy
+a=[1,2,3,[3,4,5]]
+print a
+print 'complete copy'
+b=a
+print b
+print 'the id of a is '
+print id(a)
+print 'the id of b is '
+print id(b)
+print 'copy'
+c=copy.copy(a)
+print c
+print 'the id of c is '
+print id(c)
+print 'the id of a[3][1] is '
+print id(a[3][1])
+print 'the id of c[3][1] is '
+print id(c[3][1])
+c[3][1]=9
+print c
+print a
+print 'deepcopy'
+d=copy.deepcopy(a)
+print d
+print 'the id of d is '
+print id(d)
+print 'the id of d[3][1] is '
+print id(d[3][1])
+d[3][1]=89
+print d
+/////////////////////////////////
+[1, 2, 3, [3, 4, 5]]
+complete copy
+[1, 2, 3, [3, 4, 5]]
+the id of a is 
+140539988334208
+the id of b is 
+140539988334208
+copy
+[1, 2, 3, [3, 4, 5]]
+the id of c is 
+140539988486192
+the id of a[3][1] is 
+42303760
+the id of c[3][1] is 
+42303760
+[1, 2, 3, [3, 9, 5]]
+[1, 2, 3, [3, 9, 5]]
+deepcopy
+[1, 2, 3, [3, 9, 5]]
+the id of d is 
+140539988485976
+the id of d[3][1] is 
+42303640
+[1, 2, 3, [3, 89, 5]]
+[1, 2, 3, [3, 9, 5]]
